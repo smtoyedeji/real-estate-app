@@ -8,6 +8,7 @@ import {
   SignedOut,
   UserButton
 } from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/sonner"
 
 
 const geistSans = localFont({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <Provider>
+            <Toaster />
             {children}
           </Provider>
         </body>
